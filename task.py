@@ -16,7 +16,14 @@ pass
 
 def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: float, estremo_sup: float) -> sympy.Expr:
     """Sub-task 2: Calcolare un Integrale Definito."""
-    pass
+    function = str(input("Inserisci funzione: "))
+    variabile = str(input("Inserisci variable: "))
+    estremo_inf = float(input("Inserisci estremo inferiore: "))
+    estremo_ssup = float(input("Inserisci estremo superiore: "))
+    integrale =sympy.integrate(function,(variabile, estremo_inf, estremo_sup))
+    return integrale
+ pass
+
 
 def calcola_limite(espressione: str, variabile: str, punto: str) -> sympy.Expr:
     """Sub-task 3: Calcolare un Limite."""
