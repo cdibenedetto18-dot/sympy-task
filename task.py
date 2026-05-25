@@ -19,14 +19,19 @@ def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: fl
     function = str(input("Inserisci funzione: "))
     variabile = str(input("Inserisci variable: "))
     estremo_inf = float(input("Inserisci estremo inferiore: "))
-    estremo_ssup = float(input("Inserisci estremo superiore: "))
+    estremo_sup = float(input("Inserisci estremo superiore: "))
     integrale =sympy.integrate(function,(variabile, estremo_inf, estremo_sup))
     return integrale
- pass
+    pass
 
 
 def calcola_limite(espressione: str, variabile: str, punto: str) -> sympy.Expr:
     """Sub-task 3: Calcolare un Limite."""
+    funzione = str(input("Inserisci funzione: "))
+    variabile = str(input("Inserisci variable: "))
+    punto = str(input("Inserisci punto: "))
+    limite = sympy.limit(funzione, variabile, espressione, punto)
+    return limite
     pass
 
 def calcola_polinomio_taylor(espressione: str, variabile: str, punto: float, ordine: int) -> sympy.Expr:
